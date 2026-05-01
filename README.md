@@ -319,7 +319,7 @@ ELEVÉTION can be deployed for:
 - **Custom Integration** - Tailored data pipeline solutions
 - **Regulatory Compliance** - HIPAA, GDPR, and healthcare standards
 
-**To arrange a deployment consultation:** [partnerships@elevétion.health](mailto:partnerships@elevétion.health)
+**To arrange a deployment consultation:** [amir.toranj21@gmail.com](mailto:amir.toranj21@gmail.com)
 
 ---
 
@@ -331,7 +331,7 @@ ELEVÉTION can be deployed for:
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** - System design, data flows, and integration patterns
 
 ### Support & Security
-- **Partnership & Integration**: [partnerships@elevétion.health](mailto:partnerships@elevétion.health)
+- **Partnership, Integration & Inquiries**: [amir.toranj21@gmail.com](mailto:amir.toranj21@gmail.com)
 - **Security Vulnerabilities**: [security@elevétion.health](mailto:security@elevétion.health)
 - **Technical Documentation**: See SPECIFICATIONS.md and FEATURES.md
 
@@ -379,7 +379,7 @@ ELEVÉTION demonstrates enterprise-grade best practices in:
 
 For partnerships, deployment, or technical inquiries:
 
-[📧 Contact us](mailto:partnerships@elevétion.health) | [📚 Explore Docs](./SPECIFICATIONS.md) | [🚀 View Features](./FEATURES.md) | [🏗️ Architecture](./ARCHITECTURE.md)
+[📧 Contact us](mailto:amir.toranj21@gmail.com) | [📚 Explore Docs](./SPECIFICATIONS.md) | [🚀 View Features](./FEATURES.md) | [🏗️ Architecture](./ARCHITECTURE.md)
 
 ---
 
