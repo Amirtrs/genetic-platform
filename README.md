@@ -123,25 +123,25 @@ Docker & Docker Compose
 
 ## 📸 Screenshots
 
-### Dashboard - Clinical Overview
-![Dashboard](./sc/Screenshot%202026-05-01%20154140.png)
-
-*Main clinical dashboard with health scores, risk stratification, and data source visualization*
-
 ### Health Hub - Multi-Omic Integration
-![Health Hub](./sc/Screenshot%202026-05-01%20154214.png)
+![Health Hub](./sc/Screenshot%202026-05-01%20154140.png)
 
-*Comprehensive health data center with all seven data sources integrated*
+*Comprehensive health data center with all capabilities - genetics, labs, microbiome, epigenetics, wearables, and multi-omic analysis integrated*
 
-### Mobile Experience - PWA Interface
-![Mobile](./sc/Screenshot%202026-05-01%20154239.png)
+### Agent Builder - Custom AI Analysis
+![Agent Builder](./sc/Screenshot%202026-05-01%20154214.png)
 
-*Fully optimized mobile interface with bottom navigation and touch-friendly controls*
+*Admin panel for creating custom AI agents - configure specialized analysis engines with tailored prompts based on patient data and clinical workflows*
 
-### AI Analysis & Insights
-![AI Insights](./sc/Screenshot%202026-05-01%20161222.png)
+### SNP Database - Variant Analysis
+![SNP Database](./sc/Screenshot%202026-05-01%20154239.png)
 
-*Advanced multi-model AI analysis with clinical recommendations and personalized health insights*
+*Advanced variant database with 998,204+ classified SNPs - comprehensive genetic variant analysis, pathogenicity scoring, and clinical interpretation*
+
+### Clinical Dashboard - Patient Summary
+![Dashboard](./sc/Screenshot%202026-05-01%20161222.png)
+
+*Main patient dashboard providing quick overview of health metrics, key findings, and actionable insights across all data sources*
 
 ---
 
