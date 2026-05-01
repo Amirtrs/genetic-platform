@@ -344,7 +344,7 @@ ELEVÉTION can be deployed for:
 
 ### Support & Security
 - **Partnership, Integration & Inquiries**: [amir.toranj21@gmail.com](mailto:amir.toranj21@gmail.com)
-- **Security Vulnerabilities**: [security@elevétion.health](mailto:security@elevétion.health)
+- **Security Vulnerabilities & Support**: [amir.toranj21@gmail.com](mailto:amir.toranj21@gmail.com)
 - **Technical Documentation**: See SPECIFICATIONS.md and FEATURES.md
 
 ---

@@ -21,7 +21,7 @@ If you are part of the ELEVÉTION development team:
 
 For inquiries about partnerships, integrations, or contributions:
 
-- **Email**: partnerships@elevétion.health
+- **Email**: amir.toranj21@gmail.com
 - **Subject**: [ELEVÉTION Partnership Inquiry]
 
 ## Documentation Updates
@@ -67,7 +67,7 @@ If you discover a security vulnerability:
 
 1. **Do not** open a public issue
 2. **Do not** commit any proof-of-concept code
-3. Email: security@elevétion.health
+3. Email: amir.toranj21@gmail.com
 4. Include: vulnerability description, impact assessment, suggested fix
 
 ### Responsible Disclosure
