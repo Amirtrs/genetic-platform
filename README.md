@@ -60,11 +60,13 @@ ELEVÉTION is a comprehensive healthcare intelligence system designed for genomi
 ### 🤖 AI-Powered Features
 
 - **Dr. Sarah AI Assistant** - Conversational health advisor with contextual memory
-- **Automated Reports** - AI-generated clinical summaries using advanced LLMs
+- **Multi-Model Ensemble** - GPT-5.2, Claude 4.5 (Sonnet), Gemini 3 Flash for optimal results
+- **Automated Reports** - AI-generated clinical summaries with PDF export
+- **Lab Analysis** - Per-category diagnostic interpretation with clinical recommendations
 - **Trend Detection** - Multi-test comparison and temporal pattern analysis
-- **Health Mapping** - Unified visualization of complex health data
-- **Learning System** - Adapts recommendations based on user feedback
-- **Smart Recommendations** - Supplement and protocol suggestions
+- **Health Mapping** - Unified visualization of complex multi-omic data
+- **Smart Context** - Genetics + labs + wearables for integrated AI analysis
+- **Smart Recommendations** - Supplement and protocol suggestions powered by AI
 
 ### 👥 Patient Management
 
@@ -103,8 +105,9 @@ FastAPI (Python 3.11+)
 ├── Pydantic (validation)
 ├── PostgreSQL 15 (database)
 ├── Alembic (migrations)
-├── Groq API (AI inference)
-└── OpenAI API (advanced models)
+├── OpenRouter (multi-AI routing)
+├── GPT-5.2 / Claude 4.5 / Gemini 3 (ensemble)
+└── AI Context Management & Prompt Engineering
 ```
 
 ### Deployment
@@ -141,9 +144,13 @@ Docker & Docker Compose
 
 | Metric | Value |
 |--------|-------|
-| **Data Sources** | 7 omics categories |
-| **PRS Conditions** | 30+ risk categories |
-| **SNP Database** | 1M+ variants |
+| **Variants Database** | 998,204 classified variants |
+| **Biomarkers** | 110+ clinical biomarkers |
+| **Analysis Categories** | 42 health categories |
+| **Analysis Tabs** | 15 specialized views (Labs, PRS, Inflammation, etc.) |
+| **Polygenic Risk Scores** | 330 conditions from PGS Catalog |
+| **Data Sources** | 8 multi-omic categories |
+| **AI Models** | 3-model ensemble (GPT-5.2, Claude 4.5, Gemini 3) |
 | **API Endpoints** | 50+ RESTful services |
 | **UI Components** | 100+ reusable components |
 | **Database Tables** | 20+ normalized tables |
@@ -223,7 +230,7 @@ For complete documentation and technical details:
 ## 🌟 Innovation Highlights
 
 1. **Multi-Omic Integration** - Unifies 7 different data sources
-2. **AI-Powered Analysis** - Real-time insights with LLaMA 3 and GPT-4
+2. **AI-Powered Analysis** - Multi-model ensemble with GPT-5.2, Claude 4.5, Gemini 3
 3. **Peptide Protocols** - 12+ comprehensive health optimization regimens
 4. **Biological Age** - DNAm acceleration and epigenetic clock calculations
 5. **PRS Engine** - Automated polygenic risk scoring
