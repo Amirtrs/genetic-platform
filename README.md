@@ -138,6 +138,11 @@ Docker & Docker Compose
 
 *Fully optimized mobile interface with bottom navigation and touch-friendly controls*
 
+### AI Analysis & Insights
+![AI Insights](./sc/Screenshot%202026-05-01%20161222.png)
+
+*Advanced multi-model AI analysis with clinical recommendations and personalized health insights*
+
 ---
 
 ## 📊 Platform Statistics
