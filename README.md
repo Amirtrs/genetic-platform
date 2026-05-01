@@ -268,96 +268,123 @@ For complete documentation and technical details:
 
 ---
 
-## 💼 Use Cases
+## 💼 Use Cases by Role
 
-- **Precision Medicine Clinics** - Comprehensive genomic analysis for patients
-- **Wellness Programs** - Corporate health optimization
-- **Research Institutions** - Multi-omic data analysis
-- **Telehealth Platforms** - Integrated health intelligence
-- **Direct-to-Consumer Genomics** - Patient health platforms
-- **Hospital Systems** - Clinical decision support
+### 🏥 Healthcare Clinics & Systems
+- Comprehensive genomic analysis for patient precision medicine
+- Integration with existing EHR systems
+- Multi-patient management and comparison
+- Clinical decision support for complex cases
+- Professional report generation for patient communication
+- Compliance with healthcare data regulations
+
+### 👨‍⚕️ Medical Doctors & Specialists
+- Real-time genomic insights for clinical decision-making
+- Drug-gene interaction warnings and CYP450 analysis
+- Patient health overview with multi-omic data
+- Risk stratification and preventive care planning
+- AI-assisted clinical recommendations
+- Audit trail for quality and compliance
+
+### 🔬 Genomic Specialists & Researchers
+- Advanced SNP analysis and interpretation
+- Pathway analysis and multi-disease assessment
+- Polygenic risk scoring for 30+ conditions
+- Multi-omic data integration and analysis
+- Export data for research and publication
+- Customizable analysis workflows
+
+### 💊 Wellness & Preventive Medicine
+- Biohacking and optimization protocols
+- Supplement and lifestyle recommendations
+- Biological age tracking and optimization
+- Wearable integration for comprehensive wellness
+- Personalized peptide and protocol suggestions
 
 ---
 
-## 📧 Contact & Support
+## 🚀 Getting Started & Deployment
 
-For inquiries about ELEVÉTION:
+### For Demo & Evaluation
+Interested in exploring ELEVÉTION for your organization? We provide:
+- **Live Demo Access** - Experience the full platform
+- **Technical Consultation** - Architecture and integration discussion
+- **Proof of Concept** - Custom implementation timeline
+- **Implementation Support** - Full deployment guidance
 
-- **Partnership Inquiries**: partnerships@elevétion.health
-- **Security Issues**: security@elevétion.health
-- **Technical Questions**: See internal documentation
+### For Custom Deployment
+ELEVÉTION can be deployed for:
+- **Private Cloud** - Secure on-premises installation
+- **Hybrid Setup** - Flexible multi-environment architecture
+- **Custom Integration** - Tailored data pipeline solutions
+- **Regulatory Compliance** - HIPAA, GDPR, and healthcare standards
+
+**To arrange a deployment consultation:** [partnerships@elevétion.health](mailto:partnerships@elevétion.health)
 
 ---
 
-## ⚖️ License
+## 📋 Documentation & Resources
 
-This project is licensed under a Proprietary License.
+### Developer Resources
+- **[SPECIFICATIONS.md](SPECIFICATIONS.md)** - Complete API reference and technical specifications (50+ endpoints)
+- **[FEATURES.md](FEATURES.md)** - Comprehensive feature documentation and use cases
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System design, data flows, and integration patterns
 
-See [LICENSE](LICENSE) for full terms and conditions.
+### Support & Security
+- **Partnership & Integration**: [partnerships@elevétion.health](mailto:partnerships@elevétion.health)
+- **Security Vulnerabilities**: [security@elevétion.health](mailto:security@elevétion.health)
+- **Technical Documentation**: See SPECIFICATIONS.md and FEATURES.md
 
-All rights reserved © 2026 ELEVÉTION Health.
+---
+
+## ⚖️ License & Legal
+
+This project is licensed under a **Proprietary License**.
+
+See [LICENSE](LICENSE) for complete terms and conditions.
+
+**All rights reserved © 2026 ELEVÉTION Health**
 
 ---
 
 ## 🎓 Technical Excellence
 
-This platform demonstrates best practices in:
+ELEVÉTION demonstrates enterprise-grade best practices in:
 
-- Modern web application architecture
-- Healthcare IT systems design
-- Genomic data visualization
-- AI integration in clinical software
-- Role-based access control (RBAC)
-- Multi-tenant architecture patterns
-- Mobile-responsive design
-- Enterprise database design
+- ✅ Modern full-stack web architecture
+- ✅ Healthcare IT systems design and compliance
+- ✅ Advanced data visualization and analytics
+- ✅ AI/ML integration in clinical software
+- ✅ Role-based access control (RBAC)
+- ✅ Multi-tenant architecture patterns
+- ✅ Progressive Web App (PWA) technology
+- ✅ Containerized deployment (Docker)
+- ✅ Healthcare data security standards
 
 ---
 
 <div align="center">
 
-**Built with precision. Designed for health. Powered by AI.**
+## Built with Precision. Designed for Health. Powered by AI.
 
-🧬 ELEVÉTION - The Future of Personalized Medicine
+### 🧬 ELEVÉTION - The Future of Personalized Medicine
+
+**Advanced precision medicine meets cutting-edge technology**
 
 ---
 
-Made with ❤️ for healthcare innovation
+### 📞 Get Started Today
 
-[Visit us](#) | [Documentation](./SPECIFICATIONS.md) | [Features](./FEATURES.md) | [Architecture](./ARCHITECTURE.md)
+**Clinics • Doctors • Specialists • Researchers**
+
+For partnerships, deployment, or technical inquiries:
+
+[📧 Contact us](mailto:partnerships@elevétion.health) | [📚 Explore Docs](./SPECIFICATIONS.md) | [🚀 View Features](./FEATURES.md) | [🏗️ Architecture](./ARCHITECTURE.md)
+
+---
+
+**Made with ❤️ for healthcare innovation and precision medicine**
+
+© 2026 ELEVÉTION Health. All rights reserved.
 
 </div>
-│   │   │   ├── lab-panels/        # Lab reports
-│   │   │   ├── recommendations/   # Clinical recommendations
-│   │   │   └── ...
-│   │   └── authentication/        # Login/Register
-│   └── package.json
-│
-├── backend/                  # FastAPI application
-│   ├── main.py              # Main API file
-│   ├── app/
-│   │   ├── database.py      # PostgreSQL configuration
-│   │   └── models.py        # SQLAlchemy models
-│   ├── data/                # Initial JSON data (migrated to DB on startup)
-│   └── requirements.txt
-│
-├── docker-compose.yml       # Docker setup
-└── .env.example            # Environment template
-```
-
-## 🔒 Security Features
-
-- ✅ bcrypt password hashing (not SHA256)
-- ✅ JWT tokens with configurable expiry
-- ✅ SECRET_KEY from environment variable
-- ✅ Role-based access control
-- ✅ Protected API endpoints
-- ✅ Audit logging
-
-## 📄 License
-
-MIT License
-
----
-
-Built with ❤️ for clinical genomics
