@@ -10,20 +10,82 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)](https://www.docker.com)
 [![License](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
 
-> A revolutionary precision medicine platform integrating multi-omic genomic data with AI-powered clinical insights for personalized health optimization.
+> A precision medicine platform integrating multi-omic genomic data with AI-powered clinical insights for personalized health optimization.
 
 ## 📸 Platform Overview
 
-ELEVÉTION is a comprehensive healthcare intelligence system designed for genomic data analysis, clinical decision support, and personalized health recommendations. It combines cutting-edge UI/UX with powerful backend analytics to deliver actionable insights from complex genomic and clinical datasets.
+ELEVÉTION is a healthcare intelligence system designed for genomic data analysis, clinical decision support, and personalized health recommendations. It combines a modern UI/UX with backend analytics to deliver actionable insights from complex genomic and clinical datasets.
 
 ### Core Capabilities
 
 - **Real-time Multi-Omic Integration** - 7 data sources unified in single analysis
-- **AI-Powered Analysis** - LLaMA 3 and GPT-4 driven clinical insights
+- **AI-Powered Analysis** - Multi-model ensemble (Claude Sonnet 5, GPT-5.6, Gemini 3.6) driven clinical insights
 - **Advanced Genomic Analysis** - SNP interpretation, PRS scoring, drug interactions
 - **Comprehensive Patient Management** - Complete lifecycle management system
 - **Professional Reporting** - Export-ready clinical reports with visualizations
 - **Mobile-First Design** - Native app-like experience on any device
+
+---
+
+## About the Developer
+
+Built solo by Amir, a biomedical AI engineer specializing in genomics, biosignal processing, and clinical AI systems.
+
+- **LinkedIn**: [https://www.linkedin.com/in/amir-toranjsimin-202a67222/](https://www.linkedin.com/in/amir-toranjsimin-202a67222/)
+- **Contact**: [amir.toranj21@gmail.com](mailto:amir.toranj21@gmail.com)
+
+---
+
+## 🏗️ Architecture Overview
+
+High-level view of how data moves through the system, from patient upload to AI-assisted report generation, based on the current backend routes, services, and database models.
+
+```mermaid
+flowchart TD
+    User["Patient / Clinician"]
+    Upload["Upload UI<br/>(genetic file, lab results,<br/>microbiome data)"]
+
+    User --> Upload
+
+    subgraph FE["Frontend (Next.js 14)"]
+        Upload
+        Dashboard["Clinical Dashboard"]
+        HealthHub["Health Hub<br/>(multi-omic view)"]
+        ReportViewer["Genetic Reports Viewer"]
+    end
+
+    Upload -->|"REST API call"| Routes
+
+    subgraph BE["Backend (FastAPI)"]
+        Routes["API Routes<br/>genetic_analysis.py, health_data.py,<br/>reports.py, ai_chat.py"]
+        Engine["Analysis Engine<br/>SNP interpretation, PRS scoring,<br/>drug-gene interaction"]
+        AIEnsemble["ai_service.py<br/>OpenRouter ensemble:<br/>Claude Sonnet 5, GPT-5.6, Gemini 3.6"]
+        ScoreService["health_score_service.py<br/>weighted multi-omic scoring"]
+        ReportGen["report_generator.py<br/>AI clinical summary + PDF export"]
+
+        Routes --> Engine
+        Routes --> ScoreService
+        Engine --> AIEnsemble
+        Routes --> ReportGen
+    end
+
+    Engine --> DB
+    AIEnsemble --> DB
+    ScoreService --> DB
+    ReportGen --> DB
+
+    subgraph Data["PostgreSQL 15"]
+        DB[("Genetic Reports, Lab Results,<br/>Health Scores, Audit Log")]
+    end
+
+    DB --> Dashboard
+    DB --> HealthHub
+    ReportGen --> ReportViewer
+
+    Dashboard --> User
+    HealthHub --> User
+    ReportViewer --> User
+```
 
 ---
 
@@ -60,7 +122,7 @@ ELEVÉTION is a comprehensive healthcare intelligence system designed for genomi
 ### 🤖 AI-Powered Features
 
 - **Dr. Sarah AI Assistant** - Conversational health advisor with contextual memory
-- **Multi-Model Ensemble** - GPT-5.2, Claude 4.5 (Sonnet), Gemini 3 Flash for optimal results
+- **Multi-Model Ensemble** - Model-agnostic ensemble (via OpenRouter) combining Claude Sonnet 5 (Anthropic), GPT-5.6 (OpenAI), and Gemini 3.6 (Google) for optimal results; individual models can be swapped or upgraded via API configuration as newer versions are released
 - **Automated Reports** - AI-generated clinical summaries with PDF export
 - **Lab Analysis** - Per-category diagnostic interpretation with clinical recommendations
 - **Trend Detection** - Multi-test comparison and temporal pattern analysis
@@ -105,8 +167,8 @@ FastAPI (Python 3.11+)
 ├── Pydantic (validation)
 ├── PostgreSQL 15 (database)
 ├── Alembic (migrations)
-├── OpenRouter (multi-AI routing)
-├── GPT-5.2 / Claude 4.5 / Gemini 3 (ensemble)
+├── OpenRouter (model-agnostic multi-AI routing)
+├── Claude Sonnet 5 / GPT-5.6 / Gemini 3.6 (ensemble, swappable via config)
 └── AI Context Management & Prompt Engineering
 ```
 
@@ -155,7 +217,7 @@ Docker & Docker Compose
 | **Analysis Tabs** | 15 specialized views (Labs, PRS, Inflammation, etc.) |
 | **Polygenic Risk Scores** | 330 conditions from PGS Catalog |
 | **Data Sources** | 8 multi-omic categories |
-| **AI Models** | 3-model ensemble (GPT-5.2, Claude 4.5, Gemini 3) |
+| **AI Models** | 3-model ensemble (Claude Sonnet 5, GPT-5.6, Gemini 3.6) |
 | **API Endpoints** | 50+ RESTful services |
 | **UI Components** | 100+ reusable components |
 | **Database Tables** | 20+ normalized tables |
@@ -205,7 +267,7 @@ Docker & Docker Compose
 - **Authorization**: Role-based access control (RBAC)
 - **Encryption**: SSL/TLS in transit, data encrypted at rest
 - **Audit Logging**: Complete record of all user actions
-- **HIPAA Compliance**: Patient data protection frameworks
+- **Healthcare-Minded Data Protection**: Data protection practices designed with healthcare compliance requirements in mind (encryption, RBAC, audit logging)
 - **Data Privacy**: GDPR and CCPA considerations
 - **Password Security**: bcrypt hashing with strong salt
 
@@ -235,7 +297,7 @@ For complete documentation and technical details:
 ## 🌟 Innovation Highlights
 
 1. **Multi-Omic Integration** - Unifies 7 different data sources
-2. **AI-Powered Analysis** - Multi-model ensemble with GPT-5.2, Claude 4.5, Gemini 3
+2. **AI-Powered Analysis** - Multi-model ensemble with Claude Sonnet 5, GPT-5.6, Gemini 3.6
 3. **Peptide Protocols** - 12+ comprehensive health optimization regimens
 4. **Biological Age** - DNAm acceleration and epigenetic clock calculations
 5. **PRS Engine** - Automated polygenic risk scoring
@@ -250,12 +312,11 @@ For complete documentation and technical details:
 - Lab results (CSV, PDF, HL7)
 - Microbiome analysis files
 - Wearable device APIs
-- Electronic Health Records (EHR)
 
 ### AI Services
-- Groq LLaMA 3 (70B model)
-- OpenAI GPT-4
-- LangChain orchestration
+- Model-agnostic multi-AI ensemble via OpenRouter (routing layer)
+- Claude Sonnet 5 (Anthropic), GPT-5.6 (OpenAI), and Gemini 3.6 (Google) used together for optimal results
+- Individual models can be swapped or upgraded via API configuration as newer versions are released
 
 ### Export Formats
 - Professional PDF reports
@@ -284,7 +345,7 @@ For complete documentation and technical details:
 
 ### 🏥 Healthcare Clinics & Systems
 - Comprehensive genomic analysis for patient precision medicine
-- Integration with existing EHR systems
+- Designed to integrate with clinical data pipelines (lab results, genomic files, wearables)
 - Multi-patient management and comparison
 - Clinical decision support for complex cases
 - Professional report generation for patient communication
@@ -318,18 +379,18 @@ For complete documentation and technical details:
 ## 🚀 Getting Started & Deployment
 
 ### For Demo & Evaluation
-Interested in exploring ELEVÉTION for your organization? We provide:
-- **Live Demo Access** - Experience the full platform
+ELEVÉTION is not currently deployed to a live, public environment. For evaluation, we provide:
+- **Architecture & Specifications** - Review [ARCHITECTURE.md](ARCHITECTURE.md), [SPECIFICATIONS.md](SPECIFICATIONS.md), and [FEATURES.md](FEATURES.md)
+- **Screenshots** - See the Platform Overview section above
+- **Live Demo / Proof of Concept** - Can be arranged upon request
 - **Technical Consultation** - Architecture and integration discussion
-- **Proof of Concept** - Custom implementation timeline
-- **Implementation Support** - Full deployment guidance
 
 ### For Custom Deployment
 ELEVÉTION can be deployed for:
 - **Private Cloud** - Secure on-premises installation
 - **Hybrid Setup** - Flexible multi-environment architecture
 - **Custom Integration** - Tailored data pipeline solutions
-- **Regulatory Compliance** - HIPAA, GDPR, and healthcare standards
+- **Compliance-Minded Architecture** - Built following HIPAA, GDPR, and healthcare data-handling principles (not a certified or formally audited compliance solution)
 
 **To arrange a deployment consultation:** [amir.toranj21@gmail.com](mailto:amir.toranj21@gmail.com)
 
@@ -361,7 +422,7 @@ See [LICENSE](LICENSE) for complete terms and conditions.
 
 ## 🎓 Technical Excellence
 
-ELEVÉTION demonstrates enterprise-grade best practices in:
+ELEVÉTION demonstrates the following practices in:
 
 - ✅ Modern full-stack web architecture
 - ✅ Healthcare IT systems design and compliance
@@ -379,9 +440,9 @@ ELEVÉTION demonstrates enterprise-grade best practices in:
 
 ## Built with Precision. Designed for Health. Powered by AI.
 
-### 🧬 ELEVÉTION - The Future of Personalized Medicine
+### 🧬 ELEVÉTION - A Precision Medicine Platform
 
-**Advanced precision medicine meets cutting-edge technology**
+**Genomic data analysis combined with AI-powered clinical insights**
 
 ---
 

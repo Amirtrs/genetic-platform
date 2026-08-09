@@ -241,7 +241,7 @@ backend/
 │
 ├── config.py                        # Configuration
 │   ├── Database URL
-│   ├── API keys (Groq, OpenAI)
+│   ├── API keys (OpenRouter)
 │   ├── JWT secret
 │   └── Environment variables
 │
@@ -312,8 +312,8 @@ backend/
 │   ├── health_score_service.py      # Health score calculation
 │   │
 │   ├── ai_service.py
-│   │   ├── Groq API integration
-│   │   ├── OpenAI integration
+│   │   ├── OpenRouter integration (model-agnostic routing)
+│   │   ├── Multi-model ensemble calls (Claude Sonnet 5, GPT-5.6, Gemini 3.6)
 │   │   └── Response caching
 │   │
 │   ├── report_generator.py
@@ -391,8 +391,8 @@ FastAPI (Python 3.11+)
 │   └── Error reporting
 │
 ├── AI Integration
-│   ├── Groq API client
-│   ├── OpenAI API client
+│   ├── OpenRouter client (model-agnostic routing)
+│   ├── Multi-model ensemble (Claude Sonnet 5, GPT-5.6, Gemini 3.6)
 │   ├── Prompt engineering
 │   ├── Response parsing
 │   └── Token management
@@ -573,7 +573,7 @@ Audit the access attempt
 
 ## 🤖 AI Integration Architecture
 
-### **Groq API Flow**
+### **Multi-Model AI Flow (via OpenRouter)**
 
 ```
 Patient Health Data
@@ -582,8 +582,8 @@ Prepare context (curated patient information)
     ↓
 Build prompt template
     ↓
-Call Groq API
-├── Model: LLaMA 3 70B
+Call AI ensemble via OpenRouter
+├── Models: Claude Sonnet 5, GPT-5.6, Gemini 3.6
 ├── Max tokens: 2000
 ├── Temperature: 0.7
 └── Stream responses: True
@@ -613,7 +613,7 @@ Aggregate patient data
 └── Previous recommendations
     ↓
 Call AI to interpret data
-├── Groq API for generation
+├── OpenRouter ensemble (Claude Sonnet 5, GPT-5.6, Gemini 3.6)
 ├── Custom templates
 └── Data formatting
     ↓

@@ -10,7 +10,7 @@ ELEVÉTION is a production-ready precision genomic health platform that integrat
 
 ### **Core Capabilities**
 - **Data Integration**: 7 multi-omic data sources in unified analysis
-- **AI Analysis**: Real-time genomic interpretation with LLaMA 3 / GPT-4
+- **AI Analysis**: Real-time genomic interpretation with a multi-model ensemble (Claude Sonnet 5, GPT-5.6, Gemini 3.6)
 - **Clinical Reporting**: Automated report generation with AI insights
 - **Patient Management**: Complete lifecycle management for healthcare organizations
 - **Mobile-First**: Native app-like experience on iOS, Android, and desktop
@@ -77,9 +77,8 @@ Replication:      WAL-based for redundancy
 
 ### **AI/ML Integration**
 ```
-Primary:          Groq LLaMA 3 (70b model)
-Fallback:         OpenAI GPT-4
-Library:          LangChain (for orchestration)
+Ensemble:         Claude Sonnet 5 (Anthropic), GPT-5.6 (OpenAI), Gemini 3.6 (Google)
+Routing:          OpenRouter (model-agnostic, swappable via config)
 Context Window:   Up to 8K tokens
 Temperature:      0.7 (balanced creativity/consistency)
 ```
@@ -381,7 +380,7 @@ Output: Overall Health Score (0-100)
 ```
 1. Retrieve all patient data
 2. Format context for LLM
-3. Send to Groq API (LLaMA 3 70B)
+3. Send to AI ensemble via OpenRouter (Claude Sonnet 5, GPT-5.6, Gemini 3.6)
 4. Stream response to frontend
 5. Cache for quick retrieval
 6. Generate PDF with formatting
@@ -440,7 +439,7 @@ services:
   backend:
     image: python:3.11
     ports: [8500:8000]
-    env: DATABASE_URL, GROQ_API_KEY
+    env: DATABASE_URL, OPENROUTER_API_KEY
     
   postgres:
     image: postgres:15-alpine
@@ -456,8 +455,7 @@ services:
 ### **Environment Variables**
 ```
 DATABASE_URL=postgresql://user:password@postgres:5432/elevétion
-GROQ_API_KEY=gsk_...
-OPENAI_API_KEY=sk-...
+OPENROUTER_API_KEY=sk-or-...
 JWT_SECRET=your-secret-key
 FRONTEND_URL=https://platform.elevétion.com
 BACKEND_URL=https://api.elevétion.com
@@ -589,8 +587,7 @@ DEBUG=false
 
 ## 🤝 Integration Partners
 
-- **Groq** - AI inference
-- **OpenAI** - Advanced AI models
+- **OpenRouter** - Multi-model AI routing (Claude Sonnet 5, GPT-5.6, Gemini 3.6)
 - **DigitalOcean** - Cloud hosting
 - **SendGrid** - Email delivery
 - **Stripe** - Payment processing (optional)
